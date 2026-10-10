@@ -32,6 +32,7 @@ jobs:
         run: |
           mkdir -p _site/assets
           cp Landing_Page.html _site/index.html
+          cp Landing_Page.html _site/Landing_Page.html
           cp CV.html _site/CV.html
           cp assets/adedayo-headshot.jpg _site/assets/adedayo-headshot.jpg
       - name: Upload Pages artifact
