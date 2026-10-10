@@ -5,7 +5,7 @@ A personal portfolio focused on data quality, practical automation, cybersecurit
 ## Contents
 
 - `Landing_Page.html` - the editable portfolio page.
-- `assets/adedayo-headshot.png` - portrait used by the page.
+- `assets/adedayo-headshot.jpg` - optimized portrait used by the page.
 - `.github/workflows/deploy-pages.yml` - publishes the page with GitHub Pages.
 
 The Pages workflow copies `Landing_Page.html` to `index.html` in its deployment artifact, so the source file keeps its current name while the site opens at the repository URL.
