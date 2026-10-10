@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#151613">
+	<meta name="description" content="CV of Adedayo Ojaomo, focused on data quality, cybersecurity, digital forensics, and practical automation.">
+	<title>CV | Adedayo Ojaomo</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<style>
+		:root { color-scheme: dark; --ink: #151613; --ink-soft: #20211d; --paper: #f2f0e9; --text: #f5f3ec; --muted: #a4a59d; --accent: #f27643; --line: rgba(255,255,255,.14); --mono: "DM Mono", Consolas, monospace; --display: "Space Grotesk", "Trebuchet MS", sans-serif; }
+		*, *::before, *::after { box-sizing: border-box; }
+		body { margin: 0; background: var(--ink); color: var(--text); font-family: var(--display); -webkit-font-smoothing: antialiased; }
+		a { color: inherit; }
+		a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+		.toolbar { position: sticky; top: 0; z-index: 2; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px max(24px, calc((100% - 900px) / 2)); border-bottom: 1px solid var(--line); background: rgba(21,22,19,.94); backdrop-filter: blur(12px); }
+		.toolbar a { color: var(--paper); font-size: 12px; text-decoration: none; }
+		.toolbar a:hover { color: var(--accent); }
+		.print-button { min-height: 40px; padding: 0 14px; border: 0; background: var(--accent); color: #171511; font: 600 12px var(--display); cursor: pointer; transition: background .2s ease, transform .2s ease; }
+		.print-button:hover { background: #ff9160; transform: translateY(-1px); }
+		.cv { width: min(900px, calc(100% - 48px)); margin: 54px auto 80px; }
+		.cv-header { padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+		.eyebrow { margin: 0 0 14px; color: var(--accent); font: 11px var(--mono); text-transform: uppercase; }
+		h1 { margin: 0; font-size: clamp(42px, 7vw, 68px); font-weight: 600; line-height: 1; }
+		.headline { margin: 14px 0 0; color: var(--paper); font-size: 17px; line-height: 1.5; }
+		.contact-line { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 18px; color: var(--muted); font: 11px var(--mono); }
+		.contact-line a { text-decoration: none; }
+		.contact-line a:hover { color: var(--accent); }
+		.summary { max-width: 760px; margin: 24px 0 0; color: var(--paper); font-size: 15px; line-height: 1.75; }
+		.cv-section { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 28px; padding: 25px 0; border-bottom: 1px solid var(--line); }
+		.cv-section h2 { margin: 0; color: var(--accent); font: 11px/1.6 var(--mono); letter-spacing: .04em; text-transform: uppercase; }
+		.entries { display: grid; gap: 22px; }
+		.entry h3 { margin: 0; font-size: 16px; font-weight: 600; line-height: 1.45; }
+		.entry-meta { margin: 3px 0 8px; color: var(--muted); font: 10px/1.6 var(--mono); }
+		.entry p { margin: 0; color: var(--paper); font-size: 12px; line-height: 1.7; }
+		.entry ul { margin: 7px 0 0; padding-left: 17px; color: var(--paper); font-size: 12px; line-height: 1.7; }
+		.entry li + li { margin-top: 3px; }
+		.skill-group + .skill-group { margin-top: 11px; }
+		.skill-group h3 { display: inline; margin: 0; color: var(--paper); font-size: 12px; font-weight: 600; }
+		.skill-group p { display: inline; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+		.project-entry + .project-entry { margin-top: 14px; }
+		.project-entry a { display: inline-block; margin-top: 5px; color: #f0a17f; font: 10px var(--mono); text-decoration: none; }
+		.project-entry a:hover { text-decoration: underline; }
+		@media (max-width: 620px) {
+			.toolbar { padding-inline: 18px; }
+			.cv { width: calc(100% - 36px); margin-top: 34px; }
+			.cv-section { grid-template-columns: 1fr; gap: 13px; }
+		}
+		@media print {
+			:root { color-scheme: light; --ink: #fff; --ink-soft: #fff; --paper: #333; --text: #171717; --muted: #555; --accent: #a64220; --line: #ccc; }
+			body { background: #fff; color: #171717; print-color-adjust: exact; }
+			.toolbar { display: none; }
+			.cv { width: 100%; max-width: none; margin: 0; }
+			.cv-section { break-inside: avoid; }
+			a { color: inherit; text-decoration: none; }
+		}
+	</style>
+</head>
+<body>
+	<div class="toolbar">
+		<a href="Landing_Page.html">← Back to portfolio</a>
+		<button class="print-button" type="button" onclick="window.print()">Print / Save PDF</button>
+	</div>
+	<main class="cv">
+		<header class="cv-header">
+			<p class="eyebrow">Curriculum Vitae</p>
+			<h1>Adedayo Ojaomo</h1>
+			<p class="headline">Cybersecurity | Digital Forensics | Data Analytics | Python Automation</p>
+			<div class="contact-line">
+				<a href="mailto:Vojaomo27@gmail.com">Vojaomo27@gmail.com</a>
+				<a href="https://www.linkedin.com/in/adedayoojaomo/">LinkedIn</a>
+				<a href="https://github.com/Vojaomo27">GitHub</a>
+			</div>
+			<p class="summary">Technical professional working across data quality, digital investigations, and practical automation. Experienced in reviewing records, identifying inconsistencies, and improving workflows; building deeper capabilities in cybersecurity and digital forensics.</p>
+		</header>
+
+		<section class="cv-section" aria-labelledby="experience-title">
+			<h2 id="experience-title">Experience</h2>
+			<div class="entries">
+				<article class="entry">
+					<h3>Ipsos Nigeria</h3>
+					<p class="entry-meta">Data Quality / Data Validation · Contract</p>
+					<ul>
+						<li>Review participant and enterprise field-data quality reports, investigating duplicates, inconsistent records, unusual interview durations, and suspicious interview hours.</li>
+						<li>Validate records and instance IDs against project requirements and feedback using Excel and structured review workflows.</li>
+						<li>Support data-quality reporting and process improvement across large datasets.</li>
+					</ul>
+				</article>
+				<article class="entry">
+					<h3>EdVo Impacts</h3>
+					<p class="entry-meta">Data Management Executive · Contract · April–May 2026</p>
+					<ul>
+						<li>Reviewed records flagged by an automated data-management system.</li>
+						<li>Performed quality checks for accuracy, consistency, and data integrity using spreadsheets and systematic review processes.</li>
+					</ul>
+				</article>
+				<article class="entry">
+					<h3>Mikano Motors</h3>
+					<p class="entry-meta">Stock Officer Assistant → Stock Officer · NYSC · September 2024–August 2025</p>
+					<ul>
+						<li>Progressed to Stock Officer after approximately three months.</li>
+						<li>Managed inventory and spare-parts records in an ERP system, coordinated warehouse processes, and supported parts issuance for vehicle repairs.</li>
+				</ul>
+				</article>
+				<article class="entry">
+					<h3>Zerocast Global Ventures, in alliance with Flour Mills Nigeria</h3>
+					<p class="entry-meta">Industrial equipment and maintenance experience</p>
+					<p>Worked with industrial coding machines and related equipment, gaining practical exposure to maintenance, troubleshooting, and industrial processes.</p>
+				</article>
+			</div>
+		</section>
+
+		<section class="cv-section" aria-labelledby="education-title">
+			<h2 id="education-title">Education</h2>
+			<div class="entries">
+				<article class="entry">
+					<h3>B.Eng., Electrical and Electronics Engineering</h3>
+					<p class="entry-meta">Telecommunications option · Olusegun Agagu University of Science and Technology · January 2018–November 2023</p>
+					<p>Final-year project: Solar fish dryer.</p>
+				</article>
+			</div>
+		</section>
+
+		<section class="cv-section" aria-labelledby="skills-title">
+			<h2 id="skills-title">Skills &amp; Tools</h2>
+			<div>
+				<div class="skill-group"><h3>Data &amp; analytics: </h3><p>Excel, spreadsheet validation, data quality assurance, anomaly investigation, reporting, SQL, SPSS.</p></div>
+				<div class="skill-group"><h3>Development &amp; automation: </h3><p>Python, workflow scripting, AI-assisted automation, n8n experimentation, practical desktop tools.</p></div>
+				<div class="skill-group"><h3>Cybersecurity &amp; digital forensics: </h3><p>Cybersecurity fundamentals, digital forensic analysis, network observation with Wireshark; exploring Nmap and Autopsy.</p></div>
+				<div class="skill-group"><h3>Cloud &amp; infrastructure: </h3><p>Google Cloud learning, Kubernetes fundamentals, cloud and infrastructure security interests.</p></div>
+			</div>
+		</section>
+
+		<section class="cv-section" aria-labelledby="projects-title">
+			<h2 id="projects-title">Selected Projects</h2>
+			<div>
+				<article class="entry project-entry">
+					<h3>Media Instance Organizer</h3>
+					<p>Windows desktop utility that previews and copies media into worked/not-worked groups by exact instance-ID matching.</p>
+					<a href="https://github.com/Vojaomo27/media-instance-organizer">Source repository ↗</a>
+				</article>
+				<article class="entry project-entry">
+					<h3>Survey QC Automation</h3>
+					<p>Desktop survey quality-control application with a GUI, modular checks, and Excel report generation; some workflow phases remain in development.</p>
+					<a href="https://github.com/Vojaomo27/survey-qc-automation">Source repository ↗</a>
+				</article>
+				<article class="entry project-entry">
+					<h3>Staffless AI</h3>
+					<p>In-development customer chat and staff dashboard concept for reviewing conversations, leads, and follow-up actions.</p>
+					<a href="https://github.com/adedoj2/Staffless-AI">Public repository ↗</a>
+				</article>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
