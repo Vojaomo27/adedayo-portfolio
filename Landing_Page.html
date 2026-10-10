@@ -113,7 +113,6 @@
 		.hero-copy > :nth-child(2) { animation-delay: .08s; }
 		.hero-copy > :nth-child(3) { animation-delay: .16s; }
 		.hero-copy > :nth-child(4) { animation-delay: .24s; }
-		.hero-copy > :nth-child(5) { animation-delay: .32s; }
 		@keyframes rise-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 		.hero h1 { max-width: 700px; margin: 28px 0 21px; font-size: clamp(56px, 7.5vw, 96px); font-weight: 600; line-height: .91; letter-spacing: 0; }
 		.hero h1 span { display: block; color: var(--accent); }
@@ -127,19 +126,11 @@
 		.hero-portrait { position: relative; width: 100%; max-width: 450px; justify-self: end; margin: 0; }
 		.hero-portrait::before { position: absolute; z-index: 0; top: -12px; right: -12px; width: 52%; height: 52%; border-top: 1px solid var(--accent); border-right: 1px solid var(--accent); content: ""; }
 		.hero-portrait img { position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: .83; object-fit: cover; object-position: center 31%; filter: saturate(.82); }
-		.portrait-caption { position: absolute; z-index: 1; right: 0; bottom: 0; left: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 17px 18px; background: linear-gradient(transparent, rgba(16, 15, 13, .9)); color: var(--text); font: 10px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
-		.portrait-caption span:last-child { color: #f7a17b; }
 		.hero-index { position: absolute; right: 0; bottom: -35px; color: rgba(255,255,255,.055); font-size: clamp(130px, 21vw, 275px); font-weight: 700; line-height: 1; pointer-events: none; }
-
-		.ticker { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--ink-soft); }
-		.ticker-inner { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-		.ticker span { color: var(--paper-muted); font: 11px var(--mono); letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
-		.ticker .ticker-dot { color: var(--accent); font-size: 18px; }
 
 		.section { padding-block: 104px; }
 		.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 42px; }
 		.section-heading h2 { max-width: 650px; margin: 17px 0 0; font-size: clamp(35px, 5vw, 59px); font-weight: 500; line-height: 1.03; letter-spacing: 0; }
-		.section-note { max-width: 315px; margin: 0 0 5px; color: var(--muted); font-size: 13px; line-height: 1.7; }
 
 		.projects { background: #20211d; }
 		.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
@@ -159,27 +150,10 @@
 		.project-source { margin-top: 11px !important; color: #f0a17f !important; font: 10px var(--mono) !important; }
 		.project-source a { color: inherit; text-decoration: none; border-bottom: 1px solid currentColor; }
 		.project-source a:hover { color: var(--accent); }
-		.project-disclaimer { margin: 22px 0 0; color: var(--muted); font: 10px/1.7 var(--mono); }
-
-		.about { background: var(--paper); color: var(--ink); }
-		.about .eyebrow { color: #b84e2a; }
-		.about-layout { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(45px, 9vw, 132px); }
-		.about-title { margin: 0; font-size: clamp(36px, 5vw, 58px); font-weight: 500; line-height: 1.03; }
-		.about-copy p { margin: 0 0 17px; color: #55564f; font-size: 14px; line-height: 1.85; }
-		.about-copy p:last-child { margin-bottom: 0; }
-		.about-credential { margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(21,22,19,.2); color: #55564f; font: 10px/1.8 var(--mono); }
-
-		.approach { background: var(--ink); }
-		.approach-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 48px; }
-		.approach-item { padding-top: 19px; border-top: 1px solid var(--line); }
-		.approach-label { color: var(--accent); font: 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; }
-		.approach-item h3 { margin: 19px 0 10px; font-size: 20px; font-weight: 500; }
-		.approach-item p { margin: 0; color: var(--paper-muted); font: 12px/1.8 var(--mono); }
 
 		.contact { position: relative; overflow: hidden; padding-block: 92px; background: var(--accent); color: var(--ink); }
 		.contact::after { position: absolute; right: 7%; bottom: -125px; width: 310px; height: 310px; border: 1px solid rgba(21,22,19,.2); border-radius: 50%; box-shadow: 0 0 0 28px rgba(21,22,19,.045), 0 0 0 57px rgba(21,22,19,.04); content: ""; pointer-events: none; }
 		.contact .eyebrow { color: #492719; }
-		.contact h2 { max-width: 720px; margin: 21px 0 18px; font-size: clamp(39px, 6vw, 70px); font-weight: 500; line-height: .98; }
 		.contact-copy { max-width: 490px; margin: 0; color: #482f24; font-size: 14px; line-height: 1.75; }
 		.contact-links { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 27px; color: #482f24; font: 500 13px/1.5 var(--display); }
 		.contact-links a { display: inline-flex; align-items: center; gap: 10px; min-height: 40px; border-bottom: 1px solid rgba(21,22,19,.4); padding: 5px 0; color: inherit; text-decoration: none; transition: color .18s ease, border-color .18s ease, gap .18s ease, transform .18s ease; }
@@ -197,10 +171,7 @@
 			.hero h1 { font-size: clamp(55px, 9vw, 76px); }
 			.hero-portrait { align-self: center; }
 			.section { padding-block: 82px; }
-			.about-layout { gap: 50px; }
 			.project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-			.ticker-inner { justify-content: flex-start; overflow: auto; scrollbar-width: none; }
-			.ticker-inner::-webkit-scrollbar { display: none; }
 		}
 		@media (max-width: 560px) {
 			.shell { width: calc(100% - 36px); }
@@ -214,30 +185,20 @@
 			.hero-interface { top: auto; right: 12px; bottom: 79px; width: 220px; min-height: 148px; opacity: .26; }
 			.hero-copy { padding: 0; }
 			.hero h1 { margin-top: 22px; font-size: clamp(61px, 16vw, 83px); }
-			.hero-summary { max-width: 390px; }
 			.hero-portrait { width: min(100%, 380px); justify-self: start; }
 			.hero-portrait img { aspect-ratio: 1.05; object-position: center 28%; }
 			.hero-index { right: -14px; bottom: 14px; font-size: 138px; }
-			.ticker-inner { min-height: 58px; gap: 18px; }
-			.ticker span { font-size: 10px; }
 			.section { padding-block: 72px; }
 			.section-heading { align-items: start; flex-direction: column; gap: 17px; margin-bottom: 35px; }
 			.section-heading h2 { font-size: 41px; }
-			.section-note { max-width: 400px; }
-			.about-layout { grid-template-columns: 1fr; gap: 27px; }
-			.about-title { max-width: 400px; font-size: 42px; }
-			.about-copy p { font-size: 14px; }
-			.project-grid, .approach-grid, .community-grid { grid-template-columns: 1fr; gap: 12px; }
+			.project-grid { grid-template-columns: 1fr; gap: 12px; }
 			.project-card { min-height: 0; padding: 22px 20px 18px; }
 			.project-card h3 { margin-top: 22px; }
-			.approach-grid { gap: 26px; }
 			.contact { padding-block: 72px; }
-			.contact h2 { font-size: 46px; }
 			.contact::after { right: -180px; }
 			.site-footer { min-height: 72px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 8px; padding-block: 14px; }
 		}
 		@media (max-width: 360px) {
-			.nav-links a:first-child { display: none; }
 			.hero-interface { right: 8px; width: 190px; opacity: .2; }
 		}
 		@media (prefers-reduced-motion: reduce) {
@@ -255,7 +216,6 @@
 				<span class="brand-name">Adedayo Ojaomo</span>
 			</a>
 			<div class="nav-links">
-				<a href="#about">About</a>
 				<a href="#work">Projects</a>
 				<a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
 			</div>
@@ -272,7 +232,6 @@
 			</div>
 			<div class="hero-grid shell">
 				<div class="hero-copy">
-					<p class="eyebrow">Cybersecurity / data / automation</p>
 					<h1 id="hero-title">Adedayo <span>Ojaomo.</span></h1>
 					<p class="hero-role">Cybersecurity · Digital forensics · Data analytics</p>
 					<div class="hero-actions">
@@ -282,20 +241,10 @@
 				</div>
 				<figure class="hero-portrait">
 					<img src="assets/adedayo-headshot.jpg" alt="Portrait of Adedayo Ojaomo">
-					<figcaption class="portrait-caption"><span>Practical work, evidence-led</span><span>Adedayo Ojaomo</span></figcaption>
 				</figure>
 			</div>
 			<span class="hero-index" aria-hidden="true">AO</span>
 		</section>
-
-		<div class="ticker" aria-label="Areas of work">
-			<div class="ticker-inner shell">
-				<span>Data quality</span><span class="ticker-dot" aria-hidden="true">·</span>
-				<span>Useful tools</span><span class="ticker-dot" aria-hidden="true">·</span>
-				<span>Digital investigations</span><span class="ticker-dot" aria-hidden="true">·</span>
-				<span>Python automation</span>
-			</div>
-		</div>
 
 		<section class="projects section" id="work" aria-labelledby="work-title">
 			<div class="shell">
@@ -304,7 +253,6 @@
 						<p class="eyebrow">Selected projects</p>
 						<h2 id="work-title">Tools for real workflows.</h2>
 					</div>
-					<p class="section-note">A few things I’ve built or am building to organize media, investigate data quality, and make work more manageable.</p>
 				</div>
 				<div class="project-grid">
 					<article class="project-card">
@@ -336,51 +284,12 @@
 						<details class="project-details"><summary>Project notes</summary><p>The repository includes customer chat and dashboard frontends plus a Python API for storing conversations, lead updates, and appointment actions. The project notes identify conversation flows, dashboard refinement, and deployment/testing as ongoing work.</p><p class="project-source"><a href="https://github.com/adedoj2/Staffless-AI" target="_blank" rel="noopener noreferrer">View public repository (contributor) ↗</a></p></details>
 					</article>
 				</div>
-				<p class="project-disclaimer">Project summaries are based on the code and documentation in the local Codebase folder. Private workbooks and records are not linked or displayed.</p>
-			</div>
-		</section>
-
-		<section class="about section" id="about" aria-labelledby="about-title">
-			<div class="about-layout shell">
-				<div>
-					<p class="eyebrow">Built around practical problems</p>
-					<h2 class="about-title" id="about-title">I build tools that make messy workflows easier to handle.</h2>
-				</div>
-				<div class="about-copy">
-					<p>My projects start with practical friction: files that need organizing, records that need checking, or repetitive work that can be made easier to review.</p>
-					<p>I’ve built a media organizer, survey-quality and fieldwork-monitoring tools, and an AI customer-conversation product in development. Each turns a real workflow into clearer steps and more useful outputs.</p>
-					<p>I keep the work grounded in what the code does, and make it clear when a tool is still evolving.</p>
-				</div>
-			</div>
-		</section>
-
-		<section class="approach section" id="approach" aria-labelledby="approach-title">
-			<div class="shell">
-				<div class="section-heading">
-					<div>
-						<p class="eyebrow">Tools</p>
-						<h2 id="approach-title">Tools I use.</h2>
-					</div>
-				</div>
-				<div class="approach-grid">
-					<article class="approach-item">
-						<span class="approach-label">Data &amp; automation</span>
-						<h3>Python · Excel</h3>
-						<p>Used in my file-management and data-quality projects.</p>
-					</article>
-					<article class="approach-item">
-						<span class="approach-label">Cybersecurity practice &amp; exploration</span>
-						<h3>Wireshark · Nmap · Autopsy</h3>
-						<p>Wireshark for network observation; Nmap and Autopsy are tools I’m exploring.</p>
-					</article>
-				</div>
 			</div>
 		</section>
 
 		<section class="contact" id="contact" aria-labelledby="contact-title">
 			<div class="shell">
 				<p class="eyebrow">Get in touch</p>
-				<h2 id="contact-title">Let’s make something useful.</h2>
 				<p class="contact-copy">Interested in a project, forensics analysis, or practical automation? I’m open to thoughtful conversations and collaborations.</p>
 				<div class="contact-links" aria-label="Contact links">
 					<a href="mailto:Vojaomo27@gmail.com">Vojaomo27@gmail.com <span aria-hidden="true">EMAIL ↗</span></a>
