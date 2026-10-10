@@ -118,7 +118,6 @@
 		.hero h1 { max-width: 700px; margin: 28px 0 21px; font-size: clamp(56px, 7.5vw, 96px); font-weight: 600; line-height: .91; letter-spacing: 0; }
 		.hero h1 span { display: block; color: var(--accent); }
 		.hero-role { margin: 0; color: var(--paper-muted); font-size: clamp(15px, 1.7vw, 19px); line-height: 1.5; }
-		.hero-summary { max-width: 455px; margin: 20px 0 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
 		.hero-actions { display: flex; align-items: center; gap: 25px; margin-top: 34px; }
 		.button-link { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 14px; padding: 0 18px; background: var(--accent); color: #171511; font-size: 12px; font-weight: 700; text-decoration: none; transition: background .2s ease, transform .2s ease; }
 		.button-link:hover { background: #ff9160; transform: translateY(-2px); }
@@ -171,18 +170,11 @@
 		.about-credential { margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(21,22,19,.2); color: #55564f; font: 10px/1.8 var(--mono); }
 
 		.approach { background: var(--ink); }
-		.approach-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 48px; }
+		.approach-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 48px; }
 		.approach-item { padding-top: 19px; border-top: 1px solid var(--line); }
 		.approach-label { color: var(--accent); font: 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; }
 		.approach-item h3 { margin: 19px 0 10px; font-size: 20px; font-weight: 500; }
-		.approach-item p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
-		.approach-item .approach-tools { margin-top: 10px; color: var(--paper-muted); font: 11px/1.8 var(--mono); }
-
-		.community { background: #20211d; }
-		.community-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
-		.community-item { padding-top: 18px; border-top: 1px solid var(--line); }
-		.community-item h3 { margin: 0 0 8px; font-size: 18px; font-weight: 500; }
-		.community-item p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+		.approach-item p { margin: 0; color: var(--paper-muted); font: 12px/1.8 var(--mono); }
 
 		.contact { position: relative; overflow: hidden; padding-block: 92px; background: var(--accent); color: var(--ink); }
 		.contact::after { position: absolute; right: 7%; bottom: -125px; width: 310px; height: 310px; border: 1px solid rgba(21,22,19,.2); border-radius: 50%; box-shadow: 0 0 0 28px rgba(21,22,19,.045), 0 0 0 57px rgba(21,22,19,.04); content: ""; pointer-events: none; }
@@ -238,14 +230,14 @@
 			.project-grid, .approach-grid, .community-grid { grid-template-columns: 1fr; gap: 12px; }
 			.project-card { min-height: 0; padding: 22px 20px 18px; }
 			.project-card h3 { margin-top: 22px; }
-			.approach-grid, .community-grid { gap: 26px; }
+			.approach-grid { gap: 26px; }
 			.contact { padding-block: 72px; }
 			.contact h2 { font-size: 46px; }
 			.contact::after { right: -180px; }
 			.site-footer { min-height: 72px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 8px; padding-block: 14px; }
 		}
 		@media (max-width: 360px) {
-			.nav-links a:first-child, .nav-links a:nth-child(3) { display: none; }
+			.nav-links a:first-child { display: none; }
 			.hero-interface { right: 8px; width: 190px; opacity: .2; }
 		}
 		@media (prefers-reduced-motion: reduce) {
@@ -265,7 +257,6 @@
 			<div class="nav-links">
 				<a href="#about">About</a>
 				<a href="#work">Projects</a>
-				<a href="#community">Community</a>
 				<a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
 			</div>
 		</nav>
@@ -283,8 +274,7 @@
 				<div class="hero-copy">
 					<p class="eyebrow">Cybersecurity / data / automation</p>
 					<h1 id="hero-title">Adedayo <span>Ojaomo.</span></h1>
-					<p class="hero-role">Cybersecurity · Digital forensics · Data analytics · Python</p>
-					<p class="hero-summary">I investigate data, look for patterns that matter, and build practical tools that make everyday work clearer.</p>
+					<p class="hero-role">Cybersecurity · Digital forensics · Data analytics</p>
 					<div class="hero-actions">
 						<a class="button-link" href="#work">Explore projects <span aria-hidden="true">↘</span></a>
 						<a class="text-link" href="#contact">Contact me</a>
@@ -368,52 +358,21 @@
 			<div class="shell">
 				<div class="section-heading">
 					<div>
-						<p class="eyebrow">Skills &amp; tools</p>
-						<h2 id="approach-title">The tools behind my projects.</h2>
+						<p class="eyebrow">Tools</p>
+						<h2 id="approach-title">Tools I use.</h2>
 					</div>
-					<p class="section-note">Hands-on tools are separated from cybersecurity and infrastructure areas I’m still exploring.</p>
 				</div>
 				<div class="approach-grid">
 					<article class="approach-item">
-						<span class="approach-label">Work &amp; analysis</span>
-						<h3>Data quality</h3>
-						<p>Spreadsheet-based validation, record QA, anomaly review, and data-quality reporting.</p>
-						<p class="approach-tools">Excel · SQL · SPSS</p>
+						<span class="approach-label">Data &amp; automation</span>
+						<h3>Python · Excel</h3>
+						<p>Used in my file-management and data-quality projects.</p>
 					</article>
 					<article class="approach-item">
-						<span class="approach-label">Used in my projects</span>
-						<h3>Python tools</h3>
-						<p>Desktop utilities and repeatable data checks, including the media organizer and survey QC projects.</p>
-						<p class="approach-tools">Python · Pandas · OpenPyXL · Tkinter · CustomTkinter</p>
+						<span class="approach-label">Cybersecurity practice &amp; exploration</span>
+						<h3>Wireshark · Nmap · Autopsy</h3>
+						<p>Wireshark for network observation; Nmap and Autopsy are tools I’m exploring.</p>
 					</article>
-					<article class="approach-item">
-						<span class="approach-label">Security practice &amp; exploration</span>
-						<h3>Cybersecurity basics</h3>
-						<p>Wireshark for network observation; exploring common starter tools for network discovery, web testing, and forensic review.</p>
-						<p class="approach-tools">Wireshark · Nmap · Burp Suite Community · Autopsy</p>
-					</article>
-					<article class="approach-item">
-						<span class="approach-label">Learning &amp; experiments</span>
-						<h3>Cloud &amp; workflow automation</h3>
-						<p>Building foundational familiarity with cloud infrastructure and connecting tasks into useful workflows.</p>
-						<p class="approach-tools">Google Cloud · Kubernetes fundamentals · n8n · AI-assisted workflows</p>
-					</article>
-				</div>
-			</div>
-		</section>
-
-		<section class="community section" id="community" aria-labelledby="community-title">
-			<div class="shell">
-				<div class="section-heading">
-					<div>
-						<p class="eyebrow">Learning in public</p>
-						<h2 id="community-title">Curiosity gets better when it’s shared.</h2>
-					</div>
-				</div>
-				<div class="community-grid">
-					<article class="community-item"><h3>HACKSQUAD</h3><p>A cybersecurity learning community focused on learning together and staying accountable.</p></article>
-					<article class="community-item"><h3>Cybersense</h3><p>A place for creating cybersecurity content, including the intersection of AI and security.</p></article>
-					<article class="community-item"><h3>Web3 writing</h3><p>Exploring Web3 projects and practicing how to explain technical ideas in clear language.</p></article>
 				</div>
 			</div>
 		</section>
@@ -422,7 +381,7 @@
 			<div class="shell">
 				<p class="eyebrow">Get in touch</p>
 				<h2 id="contact-title">Let’s make something useful.</h2>
-				<p class="contact-copy">Interested in a project, data-quality workflow, or practical automation? I’m open to thoughtful conversations and collaborations.</p>
+				<p class="contact-copy">Interested in a project, forensics analysis, or practical automation? I’m open to thoughtful conversations and collaborations.</p>
 				<div class="contact-links" aria-label="Contact links">
 					<a href="mailto:Vojaomo27@gmail.com">Vojaomo27@gmail.com <span aria-hidden="true">EMAIL ↗</span></a>
 					<a href="https://www.linkedin.com/in/adedayoojaomo/" target="_blank" rel="noopener noreferrer">LinkedIn profile <span aria-hidden="true">PROFILE ↗</span></a>
