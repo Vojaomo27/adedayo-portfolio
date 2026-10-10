@@ -22,8 +22,8 @@ Then open `http://localhost:8000/Landing_Page.html`.
 
 ## Publish
 
-Create a public repository named `adedayo-portfolio` under `Vojaomo27`, push the `main` branch, and set **Settings > Pages > Build and deployment > Source** to **GitHub Actions**. The workflow deploys the page on each push to `main`.
+This site is deployed from the public [`Vojaomo27/adedayo-portfolio`](https://github.com/Vojaomo27/adedayo-portfolio) repository. GitHub Actions deploys the page on each push to `main`.
 
-Expected site URL: <https://vojaomo27.github.io/adedayo-portfolio/>
+Live site: <https://vojaomo27.github.io/adedayo-portfolio/>
 
-The repository should contain only this portfolio site and its assets. Do not add the parent Codebase folder, workbooks, local environments, or generated build folders.
+Keep the repository limited to this portfolio site and its assets. Do not add the parent Codebase folder, workbooks, local environments, or generated build folders.
