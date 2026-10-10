@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#151613">
+	<meta name="description" content="Selected data-quality, automation, and AI workflow projects by Adedayo Ojaomo, with a growing focus on cybersecurity and digital forensics.">
+	<title>Adedayo Ojaomo | Projects in Data, Security &amp; Automation</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+	<style>
+		:root {
+			color-scheme: dark;
+			--ink: #151613;
+			--ink-soft: #1c1d19;
+			--paper: #f2f0e9;
+			--paper-muted: #dedbd2;
+			--text: #f5f3ec;
+			--muted: #a4a59d;
+			--accent: #f27643;
+			--line: rgba(255, 255, 255, .13);
+			--mono: "DM Mono", Consolas, monospace;
+			--display: "Space Grotesk", "Trebuchet MS", sans-serif;
+			--page-width: 1160px;
+		}
+
+		*, *::before, *::after { box-sizing: border-box; }
+		html { scroll-behavior: smooth; }
+		body {
+			margin: 0;
+			background: var(--ink);
+			color: var(--text);
+			font-family: var(--display);
+			-webkit-font-smoothing: antialiased;
+		}
+		a { color: inherit; }
+		a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+		.shell { width: min(var(--page-width), calc(100% - 64px)); margin-inline: auto; }
+		.eyebrow {
+			display: flex;
+			align-items: center;
+			gap: 11px;
+			margin: 0;
+			color: var(--accent);
+			font: 500 11px/1.5 var(--mono);
+			letter-spacing: .08em;
+			text-transform: uppercase;
+		}
+		.eyebrow::before { width: 19px; height: 1px; background: currentColor; content: ""; }
+
+		.site-header { position: relative; z-index: 2; border-bottom: 1px solid var(--line); }
+		.nav { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+		.brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+		.brand-mark {
+			display: grid;
+			width: 34px;
+			aspect-ratio: 1;
+			place-items: center;
+			border: 1px solid rgba(242, 118, 67, .75);
+			color: var(--accent);
+			font: 500 11px var(--mono);
+		}
+		.brand-name { font-size: 14px; font-weight: 600; }
+		.nav-links { display: flex; align-items: center; gap: clamp(18px, 2.6vw, 34px); }
+		.nav-links a { color: var(--paper-muted); font-size: 12px; text-decoration: none; transition: color .2s ease; }
+		.nav-links a:hover { color: var(--accent); }
+		.nav-links .nav-contact { color: var(--text); border-bottom: 1px solid var(--accent); padding: 9px 0; }
+
+		.hero {
+			position: relative;
+			overflow: hidden;
+			background-color: var(--ink);
+			background-image: linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px);
+			background-size: 64px 64px;
+		}
+		.hero-grid { min-height: 650px; display: grid; grid-template-columns: 1fr .78fr; align-items: center; gap: clamp(44px, 8vw, 112px); padding-block: 66px 78px; }
+		.hero-copy { position: relative; z-index: 1; padding-block: 22px; }
+		.hero-copy > * { animation: rise-in .65s both; }
+		.hero-copy > :nth-child(2) { animation-delay: .08s; }
+		.hero-copy > :nth-child(3) { animation-delay: .16s; }
+		.hero-copy > :nth-child(4) { animation-delay: .24s; }
+		.hero-copy > :nth-child(5) { animation-delay: .32s; }
+		@keyframes rise-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+		.hero h1 { max-width: 700px; margin: 28px 0 21px; font-size: clamp(56px, 7.5vw, 96px); font-weight: 600; line-height: .91; letter-spacing: 0; }
+		.hero h1 span { display: block; color: var(--accent); }
+		.hero-role { margin: 0; color: var(--paper-muted); font-size: clamp(15px, 1.7vw, 19px); line-height: 1.5; }
+		.hero-summary { max-width: 455px; margin: 20px 0 0; color: var(--muted); font-size: 14px; line-height: 1.8; }
+		.hero-actions { display: flex; align-items: center; gap: 25px; margin-top: 34px; }
+		.button-link { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 14px; padding: 0 18px; background: var(--accent); color: #171511; font-size: 12px; font-weight: 700; text-decoration: none; transition: background .2s ease, transform .2s ease; }
+		.button-link:hover { background: #ff9160; transform: translateY(-2px); }
+		.text-link { display: inline-flex; align-items: center; gap: 8px; color: var(--paper-muted); font-size: 12px; text-decoration: none; }
+		.text-link span { color: var(--accent); transition: transform .2s ease; }
+		.text-link:hover span { transform: translateX(4px); }
+		.hero-portrait { position: relative; width: 100%; max-width: 450px; justify-self: end; margin: 0; }
+		.hero-portrait::before { position: absolute; z-index: 0; top: -12px; right: -12px; width: 52%; height: 52%; border-top: 1px solid var(--accent); border-right: 1px solid var(--accent); content: ""; }
+		.hero-portrait img { position: relative; z-index: 1; display: block; width: 100%; aspect-ratio: .83; object-fit: cover; object-position: center 31%; filter: saturate(.82); }
+		.portrait-caption { position: absolute; z-index: 1; right: 0; bottom: 0; left: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 17px 18px; background: linear-gradient(transparent, rgba(16, 15, 13, .9)); color: var(--text); font: 10px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
+		.portrait-caption span:last-child { color: #f7a17b; }
+		.hero-index { position: absolute; right: 0; bottom: -35px; color: rgba(255,255,255,.055); font-size: clamp(130px, 21vw, 275px); font-weight: 700; line-height: 1; pointer-events: none; }
+
+		.ticker { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--ink-soft); }
+		.ticker-inner { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+		.ticker span { color: var(--paper-muted); font: 11px var(--mono); letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+		.ticker .ticker-dot { color: var(--accent); font-size: 18px; }
+
+		.section { padding-block: 104px; }
+		.section-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 42px; }
+		.section-heading h2 { max-width: 650px; margin: 17px 0 0; font-size: clamp(35px, 5vw, 59px); font-weight: 500; line-height: 1.03; letter-spacing: 0; }
+		.section-note { max-width: 315px; margin: 0 0 5px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+
+		.projects { background: #20211d; }
+		.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+		.project-card { min-height: 300px; display: flex; flex-direction: column; padding: 25px 26px 22px; border: 1px solid rgba(255,255,255,.12); background: #252621; transition: border-color .2s ease, transform .2s ease; }
+		.project-card:hover { transform: translateY(-3px); border-color: rgba(242,118,67,.65); }
+		.project-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+		.project-state { color: var(--accent); font: 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; }
+		.project-index { color: rgba(255,255,255,.33); font: 11px var(--mono); }
+		.project-card h3 { margin: 29px 0 9px; font-size: 23px; font-weight: 500; line-height: 1.2; }
+		.project-card > p { max-width: 520px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.75; }
+		.project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; padding-top: 22px; }
+		.project-tags span { padding: 5px 8px; border: 1px solid rgba(255,255,255,.14); color: var(--paper-muted); font: 9px var(--mono); }
+		.project-details { margin-top: 18px; border-top: 1px solid rgba(255,255,255,.12); color: var(--paper-muted); }
+		.project-details summary { width: fit-content; padding-top: 13px; color: var(--paper-muted); cursor: pointer; font: 10px var(--mono); }
+		.project-details summary:hover { color: var(--accent); }
+		.project-details p { margin: 11px 0 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+		.project-source { margin-top: 11px !important; color: #f0a17f !important; font: 10px var(--mono) !important; }
+		.project-disclaimer { margin: 22px 0 0; color: var(--muted); font: 10px/1.7 var(--mono); }
+
+		.about { background: var(--paper); color: var(--ink); }
+		.about .eyebrow { color: #b84e2a; }
+		.about-layout { display: grid; grid-template-columns: .82fr 1.18fr; gap: clamp(45px, 9vw, 132px); }
+		.about-title { margin: 0; font-size: clamp(36px, 5vw, 58px); font-weight: 500; line-height: 1.03; }
+		.about-copy p { margin: 0 0 17px; color: #55564f; font-size: 14px; line-height: 1.85; }
+		.about-copy p:last-child { margin-bottom: 0; }
+		.about-credential { margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(21,22,19,.2); color: #55564f; font: 10px/1.8 var(--mono); }
+
+		.approach { background: var(--ink); }
+		.approach-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+		.approach-item { padding-top: 19px; border-top: 1px solid var(--line); }
+		.approach-label { color: var(--accent); font: 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; }
+		.approach-item h3 { margin: 19px 0 10px; font-size: 20px; font-weight: 500; }
+		.approach-item p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+		.approach-item p + p { margin-top: 9px; }
+
+		.community { background: #20211d; }
+		.community-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+		.community-item { padding-top: 18px; border-top: 1px solid var(--line); }
+		.community-item h3 { margin: 0 0 8px; font-size: 18px; font-weight: 500; }
+		.community-item p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+
+		.contact { position: relative; overflow: hidden; padding-block: 92px; background: var(--accent); color: var(--ink); }
+		.contact::after { position: absolute; right: 7%; bottom: -125px; width: 310px; height: 310px; border: 1px solid rgba(21,22,19,.2); border-radius: 50%; box-shadow: 0 0 0 28px rgba(21,22,19,.045), 0 0 0 57px rgba(21,22,19,.04); content: ""; pointer-events: none; }
+		.contact .eyebrow { color: #492719; }
+		.contact h2 { max-width: 720px; margin: 21px 0 18px; font-size: clamp(39px, 6vw, 70px); font-weight: 500; line-height: .98; }
+		.contact-copy { max-width: 490px; margin: 0; color: #482f24; font-size: 14px; line-height: 1.75; }
+		.contact-links { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 27px; color: #482f24; font: 10px var(--mono); }
+		.contact-links a, .contact-links span { border-bottom: 1px solid rgba(21,22,19,.35); padding-bottom: 4px; color: inherit; text-decoration: none; }
+		.contact-links a:hover { color: #171511; border-color: #171511; }
+		.site-footer { min-height: 77px; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: var(--muted); font: 10px var(--mono); }
+		.site-footer a { color: var(--paper-muted); text-decoration: none; }
+		.site-footer a:hover { color: var(--accent); }
+
+		@media (max-width: 800px) {
+			.shell { width: min(var(--page-width), calc(100% - 40px)); }
+			.hero-grid { min-height: unset; grid-template-columns: 1.05fr .75fr; gap: 32px; padding-block: 58px 68px; }
+			.hero h1 { font-size: clamp(55px, 9vw, 76px); }
+			.hero-portrait { align-self: center; }
+			.section { padding-block: 82px; }
+			.about-layout { gap: 50px; }
+			.project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+			.ticker-inner { justify-content: flex-start; overflow: auto; scrollbar-width: none; }
+			.ticker-inner::-webkit-scrollbar { display: none; }
+		}
+		@media (max-width: 560px) {
+			.shell { width: calc(100% - 36px); }
+			.nav { min-height: 70px; }
+			.brand-name { font-size: 12px; }
+			.nav-links { gap: 17px; }
+			.nav-links a { font-size: 11px; }
+			.nav-links { gap: 12px; }
+			.nav-links a { font-size: 10px; }
+			.hero-grid { grid-template-columns: 1fr; gap: 35px; padding-block: 54px 59px; }
+			.hero-copy { padding: 0; }
+			.hero h1 { margin-top: 22px; font-size: clamp(61px, 16vw, 83px); }
+			.hero-summary { max-width: 390px; }
+			.hero-portrait { width: min(100%, 380px); justify-self: start; }
+			.hero-portrait img { aspect-ratio: 1.05; object-position: center 28%; }
+			.hero-index { right: -14px; bottom: 14px; font-size: 138px; }
+			.ticker-inner { min-height: 58px; gap: 18px; }
+			.ticker span { font-size: 10px; }
+			.section { padding-block: 72px; }
+			.section-heading { align-items: start; flex-direction: column; gap: 17px; margin-bottom: 35px; }
+			.section-heading h2 { font-size: 41px; }
+			.section-note { max-width: 400px; }
+			.about-layout { grid-template-columns: 1fr; gap: 27px; }
+			.about-title { max-width: 400px; font-size: 42px; }
+			.about-copy p { font-size: 14px; }
+			.project-grid, .approach-grid, .community-grid { grid-template-columns: 1fr; gap: 12px; }
+			.project-card { min-height: 0; padding: 22px 20px 18px; }
+			.project-card h3 { margin-top: 22px; }
+			.approach-grid, .community-grid { gap: 26px; }
+			.contact { padding-block: 72px; }
+			.contact h2 { font-size: 46px; }
+			.contact::after { right: -180px; }
+			.site-footer { min-height: 72px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 8px; padding-block: 14px; }
+		}
+		@media (max-width: 360px) {
+			.nav-links a:first-child, .nav-links a:nth-child(3) { display: none; }
+		}
+		@media (prefers-reduced-motion: reduce) {
+			*, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+			.hero-copy > * { animation: none; }
+		}
+	</style>
+</head>
+<body>
+	<header class="site-header">
+		<nav class="nav shell" aria-label="Main navigation">
+			<a class="brand" href="#top" aria-label="Adedayo Ojaomo, home">
+				<span class="brand-mark" aria-hidden="true">AO</span>
+				<span class="brand-name">Adedayo Ojaomo</span>
+			</a>
+			<div class="nav-links">
+				<a href="#about">About</a>
+				<a href="#work">Projects</a>
+				<a href="#community">Community</a>
+				<a class="nav-contact" href="#contact">Contact <span aria-hidden="true">↗</span></a>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero" id="top" aria-labelledby="hero-title">
+			<div class="hero-grid shell">
+				<div class="hero-copy">
+					<p class="eyebrow">Cybersecurity / data / automation</p>
+					<h1 id="hero-title">Adedayo <span>Ojaomo.</span></h1>
+					<p class="hero-role">Cybersecurity · Digital forensics · Data analytics · Python</p>
+					<p class="hero-summary">I investigate data, look for patterns that matter, and build practical tools that make everyday work clearer.</p>
+					<div class="hero-actions">
+						<a class="button-link" href="#work">Explore projects <span aria-hidden="true">↘</span></a>
+						<a class="text-link" href="#contact">Contact me <span aria-hidden="true">→</span></a>
+					</div>
+				</div>
+				<figure class="hero-portrait">
+					<img src="assets/adedayo-headshot.png" alt="Portrait of Adedayo Ojaomo">
+					<figcaption class="portrait-caption"><span>Practical work, evidence-led</span><span>Adedayo Ojaomo</span></figcaption>
+				</figure>
+			</div>
+			<span class="hero-index" aria-hidden="true">AO</span>
+		</section>
+
+		<div class="ticker" aria-label="Areas of work">
+			<div class="ticker-inner shell">
+				<span>Data quality</span><span class="ticker-dot" aria-hidden="true">·</span>
+				<span>Useful tools</span><span class="ticker-dot" aria-hidden="true">·</span>
+				<span>Digital investigations</span><span class="ticker-dot" aria-hidden="true">·</span>
+				<span>Python automation</span>
+			</div>
+		</div>
+
+		<section class="projects section" id="work" aria-labelledby="work-title">
+			<div class="shell">
+				<div class="section-heading">
+					<div>
+						<p class="eyebrow">Selected projects</p>
+						<h2 id="work-title">Tools for real workflows.</h2>
+					</div>
+					<p class="section-note">A few things I’ve built or am building to organize media, investigate data quality, and make work more manageable.</p>
+				</div>
+				<div class="project-grid">
+					<article class="project-card">
+						<div class="project-topline"><span class="project-state">Desktop utility</span><span class="project-index">01</span></div>
+						<h3>Media Instance Organizer</h3>
+						<p>Sorts image and video files into worked or not-worked groups by matching filename IDs against a source list, with a preview before copying.</p>
+						<div class="project-tags"><span>Python</span><span>Tkinter</span><span>CSV / Excel</span><span>Windows</span></div>
+						<details class="project-details"><summary>Project notes</summary><p>Supports exact ID matching, optional subfolder scans, configurable media extensions, run logs, and saved settings. It copies rather than moves files, skips existing destinations, and leaves originals in place.</p><p class="project-source">Public source link: not published</p></details>
+					</article>
+					<article class="project-card">
+						<div class="project-topline"><span class="project-state">In development</span><span class="project-index">02</span></div>
+						<h3>Survey QC Automation</h3>
+						<p>A desktop quality-control tool taking shape around configurable checks for survey data, clear issue summaries, and Excel reporting.</p>
+						<div class="project-tags"><span>Python</span><span>CustomTkinter</span><span>Pandas</span><span>OpenPyXL</span></div>
+						<details class="project-details"><summary>Project notes</summary><p>The code includes a GUI, field mapping, modular checks for duplicates, missing values, duration, GPS bounds, and outliers, plus an Excel report generator. The project README still marks parts of the end-to-end processing workflow and packaging as unfinished.</p><p class="project-source">Public source link: not published</p></details>
+					</article>
+					<article class="project-card">
+						<div class="project-topline"><span class="project-state">Python workflow</span><span class="project-index">03</span></div>
+						<h3>Fieldwork Monitoring Workbook</h3>
+						<p>A Python script that turns a survey workbook into a structured monitoring file for reviewing data quality and fieldwork progress.</p>
+						<div class="project-tags"><span>Python</span><span>OpenPyXL</span><span>Excel automation</span></div>
+						<details class="project-details"><summary>Project notes</summary><p>Generates a dashboard, record-level flags, issue sheets, quota controls, interviewer summaries, and a progress chart. It is tied to a specific input format; no source workbook or respondent data is included here.</p><p class="project-source">Public source link: not published</p></details>
+					</article>
+					<article class="project-card">
+						<div class="project-topline"><span class="project-state">In development</span><span class="project-index">04</span></div>
+						<h3>Staffless AI</h3>
+						<p>An AI-assisted customer conversation concept pairing a website chat experience with a staff dashboard for reviewing conversations and leads.</p>
+						<div class="project-tags"><span>Next.js</span><span>React</span><span>FastAPI</span><span>PostgreSQL</span></div>
+						<details class="project-details"><summary>Project notes</summary><p>The repository includes customer chat and dashboard frontends plus a Python API for storing conversations, lead updates, and appointment actions. The project notes identify conversation flows, dashboard refinement, and deployment/testing as ongoing work.</p><p class="project-source">Public source link: not published</p></details>
+					</article>
+				</div>
+				<p class="project-disclaimer">Project summaries are based on the code and documentation in the local Codebase folder. Private workbooks and records are not linked or displayed.</p>
+			</div>
+		</section>
+
+		<section class="about section" id="about" aria-labelledby="about-title">
+			<div class="about-layout shell">
+				<div>
+					<p class="eyebrow">The thread through my work</p>
+					<h2 class="about-title" id="about-title">Understand the system. Find the signal. Make the next step easier.</h2>
+				</div>
+				<div class="about-copy">
+					<p>I’m Adedayo Ojaomo. My foundation is electrical and electronics engineering, with a telecommunications focus; my work is growing across data quality, analytics, cybersecurity, and digital forensics.</p>
+					<p>I’m drawn to practical problems: inconsistent records, unusual patterns, and repetitive workflows that can be made clearer. Data validation and operational work have taught me to pay attention both to the evidence and to the people using a process.</p>
+					<p>This portfolio is about the tools and experiments that come from that approach, while I continue developing my security and automation practice.</p>
+					<div class="about-credential">B.Eng. Electrical &amp; Electronics Engineering · Telecommunications<br>Olusegun Agagu University of Science and Technology</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="approach section" id="approach" aria-labelledby="approach-title">
+			<div class="shell">
+				<div class="section-heading">
+					<div>
+						<p class="eyebrow">How I work</p>
+						<h2 id="approach-title">Applied, building, exploring.</h2>
+					</div>
+					<p class="section-note">A distinction between hands-on work and areas I’m actively learning, not a list of expert claims.</p>
+				</div>
+				<div class="approach-grid">
+					<article class="approach-item">
+						<span class="approach-label">Applied in work</span>
+						<h3>Data quality &amp; workflows</h3>
+						<p>Spreadsheet-based validation, record review, anomaly investigation, reporting, and operational data handling.</p>
+					</article>
+					<article class="approach-item">
+						<span class="approach-label">Building with</span>
+						<h3>Python &amp; automation</h3>
+						<p>Python scripts and desktop tools for file organization and repeatable data checks; experimenting with AI-assisted workflows and n8n.</p>
+					</article>
+					<article class="approach-item">
+						<span class="approach-label">Developing</span>
+						<h3>Security &amp; analysis</h3>
+						<p>Cybersecurity fundamentals, digital forensics, network observation with Wireshark, SQL, SPSS, cloud security, GCP, and Kubernetes fundamentals.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="community section" id="community" aria-labelledby="community-title">
+			<div class="shell">
+				<div class="section-heading">
+					<div>
+						<p class="eyebrow">Learning in public</p>
+						<h2 id="community-title">Curiosity gets better when it’s shared.</h2>
+					</div>
+				</div>
+				<div class="community-grid">
+					<article class="community-item"><h3>HACKSQUAD</h3><p>A cybersecurity learning community focused on learning together and staying accountable.</p></article>
+					<article class="community-item"><h3>Cybersense</h3><p>A place for creating cybersecurity content, including the intersection of AI and security.</p></article>
+					<article class="community-item"><h3>Web3 writing</h3><p>Exploring Web3 projects and practicing how to explain technical ideas in clear language.</p></article>
+				</div>
+			</div>
+		</section>
+
+		<section class="contact" id="contact" aria-labelledby="contact-title">
+			<div class="shell">
+				<p class="eyebrow">Get in touch</p>
+				<h2 id="contact-title">Let’s make something useful.</h2>
+				<p class="contact-copy">Interested in a project, data-quality workflow, or practical automation? I’m open to thoughtful conversations and collaborations.</p>
+				<div class="contact-links" aria-label="Contact links">
+					<a href="mailto:Vojaomo27@gmail.com">Email Adedayo ↗</a>
+					<a href="https://www.linkedin.com/in/adedayoojaomo/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+					<a href="https://github.com/Vojaomo27" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer shell">
+		<span>© 2026 Adedayo Ojaomo</span>
+		<a href="#top">Back to top ↑</a>
+	</footer>
+</body>
+</html>
