@@ -136,12 +136,12 @@
 		.about-credential { margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(21,22,19,.2); color: #55564f; font: 10px/1.8 var(--mono); }
 
 		.approach { background: var(--ink); }
-		.approach-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+		.approach-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 48px; }
 		.approach-item { padding-top: 19px; border-top: 1px solid var(--line); }
 		.approach-label { color: var(--accent); font: 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; }
 		.approach-item h3 { margin: 19px 0 10px; font-size: 20px; font-weight: 500; }
 		.approach-item p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
-		.approach-item p + p { margin-top: 9px; }
+		.approach-item .approach-tools { margin-top: 10px; color: var(--paper-muted); font: 11px/1.8 var(--mono); }
 
 		.community { background: #20211d; }
 		.community-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
@@ -321,26 +321,35 @@
 			<div class="shell">
 				<div class="section-heading">
 					<div>
-						<p class="eyebrow">How I work</p>
-						<h2 id="approach-title">Applied, building, exploring.</h2>
+						<p class="eyebrow">Skills &amp; tools</p>
+						<h2 id="approach-title">The tools behind my projects.</h2>
 					</div>
-					<p class="section-note">A distinction between hands-on work and areas I’m actively learning, not a list of expert claims.</p>
+					<p class="section-note">Hands-on tools are separated from cybersecurity and infrastructure areas I’m still exploring.</p>
 				</div>
 				<div class="approach-grid">
 					<article class="approach-item">
-						<span class="approach-label">Applied in work</span>
-						<h3>Data quality &amp; workflows</h3>
-						<p>Spreadsheet-based validation, record review, anomaly investigation, reporting, and operational data handling.</p>
+						<span class="approach-label">Work &amp; analysis</span>
+						<h3>Data quality</h3>
+						<p>Spreadsheet-based validation, record QA, anomaly review, and data-quality reporting.</p>
+						<p class="approach-tools">Excel · SQL · SPSS</p>
 					</article>
 					<article class="approach-item">
-						<span class="approach-label">Building with</span>
-						<h3>Python &amp; automation</h3>
-						<p>Python scripts and desktop tools for file organization and repeatable data checks; experimenting with AI-assisted workflows and n8n.</p>
+						<span class="approach-label">Used in my projects</span>
+						<h3>Python tools</h3>
+						<p>Desktop utilities and repeatable data checks, including the media organizer and survey QC projects.</p>
+						<p class="approach-tools">Python · Pandas · OpenPyXL · Tkinter · CustomTkinter</p>
 					</article>
 					<article class="approach-item">
-						<span class="approach-label">Developing</span>
-						<h3>Security &amp; analysis</h3>
-						<p>Cybersecurity fundamentals, digital forensics, network observation with Wireshark, SQL, SPSS, cloud security, GCP, and Kubernetes fundamentals.</p>
+						<span class="approach-label">Security practice &amp; exploration</span>
+						<h3>Cybersecurity basics</h3>
+						<p>Wireshark for network observation; exploring common starter tools for network discovery, web testing, and forensic review.</p>
+						<p class="approach-tools">Wireshark · Nmap · Burp Suite Community · Autopsy</p>
+					</article>
+					<article class="approach-item">
+						<span class="approach-label">Learning &amp; experiments</span>
+						<h3>Cloud &amp; workflow automation</h3>
+						<p>Building foundational familiarity with cloud infrastructure and connecting tasks into useful workflows.</p>
+						<p class="approach-tools">Google Cloud · Kubernetes fundamentals · n8n · AI-assisted workflows</p>
 					</article>
 				</div>
 			</div>
